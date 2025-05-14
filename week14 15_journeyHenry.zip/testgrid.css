@@ -1,0 +1,149 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  display: grid;
+  justify-items: auto;
+  gap: 1em;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-areas: 
+  "header header header"
+  "topnav topnav topnav"
+  "sidebar content sidebar2"
+  "footer footer footer";
+
+  /* More CSS for wrapper but not related to grid template */
+  background-color: transparent;
+  color: rgb(63, 50, 50);
+  padding: 0 175px 0 110px;
+  margin: 0;
+  position: relative;
+}
+
+.header {
+  grid-area: header;
+}
+
+.topnav {
+  grid-area: topnav;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+}
+
+.sidebar2 {
+  grid-area: sidebar2;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.topnav a {
+  padding-right: 50px;
+  font-size: 2em;
+  text-decoration: none;
+  }
+
+.box {
+  background-color: rgb(228, 178, 87);
+  color: aliceblue;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.header, .footer {
+  background-color: rgb(228, 178, 87);
+  justify-items: center;
+}
+
+.header{
+  background-color: transparent;
+}
+
+.sidebar li {
+  list-style-type: none;
+}
+.sidebar {
+  a:link, a:visited { color: aliceblue; }
+  a:focus, a:hover, a:active {color: aliceblue; }
+}
+
+.sidebar2 {
+  background-color: rgb(228, 178, 87);
+  color: aliceblue;
+}
+
+.imgsize {
+  max-width: 50vw;
+  height: auto;
+  display: flex;
+border: rgb(228, 178, 87), solid 20px;
+border-radius: 5px;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+}
+
+/* link styles */
+a:link, a:visited { color: rgb(63, 50, 50); }
+a:focus, a:hover, a:active {color: antiquewhite;}
+
+
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    display: grid;
+    grid-gap: 1em;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: 
+      "header header"
+      "topnav topnav"
+      "sidebar content"
+      "sidebar2 sidebar2"
+      "footer footer";
+  }
+.box {
+  font-size: 1em;
+}
+.flex {
+  flex-wrap: nowrap;
+}
+
+}
+
+/* begin for smaller screens */
+@media only screen and (max-width: 800px) {
+
+  .wrapper {
+    display: block;
+    width: 100%
+  }
+
+  .box {
+    border-radius: 0%;
+  }
+
+}
+
+
+
+
+
