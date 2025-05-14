@@ -1,0 +1,45 @@
+@charset "UTF";
+/*General Reset */
+
+
+body {
+    margin: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    text-align: center;
+}
+h1, h2 {
+    color: aliceblue;
+}
+h1{
+    font-size: 2em;
+}
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+}
+p {
+    color: aliceblue;
+}
+
+/* invisited link */
+a:link {
+    color: aliceblue;
+}
+
+/*visited link */
+a:visited {
+    color: aliceblue;
+}
+
+/* mouse over link*/
+a:hover {
+    color: beige;
+}
+/* selected link */
+a:active {
+    color: aliceblue;
+}
+small {
+    color: aliceblue;
+}
